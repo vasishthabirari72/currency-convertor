@@ -1,5 +1,5 @@
 // Country code mapping for currencies
-const countryList = {
+export const countryList = {
     AED: "AE",
     AFN: "AF",
     ALL: "AL",

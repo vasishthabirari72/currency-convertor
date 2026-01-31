@@ -1,4 +1,5 @@
 // API Configuration - loads from .env via Vite
+import { countryList } from './code.js';
 const API_KEY = import.meta.env.VITE_FX_API_KEY;
 
 const selects = document.querySelectorAll(".pt");
