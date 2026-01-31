@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="./CONVERTOR.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>CURRENCY CONVERTER</h2>
+        <form id="converter-form">
+            <div class="content">
+                <div class="box">
+                    <!-- From Currency -->
+                    <div class="country-box country1">
+                        <div class="img">
+                            <img src="https://flagsapi.com/US/flat/64.png" alt="US Flag">
+                        </div>
+                        <div class="name">
+                            <p>USD</p>
+                        </div>
+                        <div class="opt">
+                            <input type="number" class="input" placeholder="Enter amount" value="1" min="0" step="0.01">
+                            <select name="from" class="pt" aria-label="From Currency"></select>
+                        </div>
+                    </div>
+
+                    <!-- Exchange Icon -->
+                    <div id="exchange">
+                        <i class="fa-solid fa-right-left"></i>
+                    </div>
+
+                    <!-- To Currency -->
+                    <div class="country-box country2">
+                        <div class="img">
+                            <img src="https://flagsapi.com/IN/flat/64.png" alt="IN Flag">
+                        </div>
+                        <div class="name">
+                            <p>INR</p>
+                        </div>
+                        <div class="opt">  
+                            <input type="number" class="input" placeholder="Converted amount" readonly>
+                            <select class="pt" name="to" aria-label="To Currency"></select>
+                        </div> 
+                    </div>
+                </div>
+
+                <div class="msg">1 USD = 80 INR</div>
+                
+                <div class="button-container">
+                    <button type="submit" class="convert-btn">GET EXCHANGE RATE</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- Load country list first -->
+    <script src="./code.js"></script>
+    <!-- Load main script as module for Vite -->
+    <script type="module" src="./main.js"></script>
+</body>
+</html>
